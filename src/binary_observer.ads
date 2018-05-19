@@ -2,13 +2,13 @@ with observer;
 
 package binary_observer is
 
-   type c_binary_observer is new observer.c_observer with private;
+   type obj is new observer.obj with private;
 
    overriding
-   procedure update (Self : in c_binary_observer) ;
+   procedure update (Self : in obj) ;
 
 private
-   type c_binary_observer is new observer.c_observer with record
+   type obj is new observer.obj with record
       blub : Integer;
    end record;
 

@@ -3,7 +3,7 @@ with Ada.Text_IO;
 package body binary_observer is
 
    overriding
-   procedure update (Self : in c_binary_observer)
+   procedure update (Self : in obj)
    is
    begin
 
