@@ -17,9 +17,10 @@ package body subject is
        Self.state := state;
    end;
 
-   procedure attach (Self : in out c_subject)
+   procedure attach (Self : in out c_subject; my_observer : observer.c_observer)
    is
    begin
+      my_observer.update;
       Self.V.Append(1);
       Self.V.Append(5);
       for I of  Self.V  loop

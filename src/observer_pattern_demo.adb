@@ -5,7 +5,8 @@ with binary_observer;
 
 procedure observer_pattern_demo is
    my_subject : subject.c_subject;
-   my_binary_observer: binary_observer.c_binary_observer;
+   my_binary_observer1: binary_observer.c_binary_observer;
+   my_binary_observer2: binary_observer.c_binary_observer;
    
     
 begin
@@ -16,8 +17,9 @@ begin
    my_subject.setState (18);
    Ada.Text_IO.Put_Line("-xxxxxxx->" & Integer'Image( my_subject.getState  ));
    
-   my_binary_observer.update;
-   my_subject.attach;
+   my_binary_observer1.update;
+   my_binary_observer2.update;
+   my_subject.attach(my_binary_observer1);
    
    
 end observer_pattern_demo;

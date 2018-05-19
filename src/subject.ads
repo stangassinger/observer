@@ -1,4 +1,5 @@
 with Ada.Containers.Vectors; use Ada.Containers;
+limited with observer;
 
 package subject is
 
@@ -10,7 +11,7 @@ package subject is
    function  getState (Self : c_subject) return Integer;
    procedure setState (Self : in out c_subject; state : Integer) ;
 
-   procedure attach (Self : in out c_subject) ;
+   procedure attach (Self : in out c_subject; my_observer : observer.c_observer) ;
 
 
 private
