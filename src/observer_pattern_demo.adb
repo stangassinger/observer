@@ -20,6 +20,7 @@ begin
       Ada.Text_IO.Put_Line("----> " & Integer'Image(I));     
    end loop;
    
+   my_subject.setState (16);
    Ada.Text_IO.Put_Line("-xxxxxxx->" & Integer'Image( my_subject.getState  )); 
    
 end observer_pattern_demo;

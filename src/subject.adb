@@ -6,4 +6,12 @@ package body subject is
       return Self.state;
    end getState;
 
+
+   procedure setState (Self: in out class_subject; state : Integer)
+   is
+   begin
+       Self.state := state;
+   end;
+
+
 end subject;
