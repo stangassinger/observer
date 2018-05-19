@@ -7,7 +7,7 @@ package body binary_observer is
    is
    begin
 
-      Ada.Text_IO.Put_Line("binary_observer");
+      Ada.Text_IO.Put_Line("this is the binary_observer update function");
    end update;
 
 end binary_observer;
