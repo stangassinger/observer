@@ -10,8 +10,8 @@ procedure observer_pattern_demo is
    V  : Int_Vectors.Vector;
    Cur : Int_Vectors.Cursor;
    
-   my_subject : subject.class_subject;
-   my_binary_observer: binary_observer.class_binary_observer;
+   my_subject : subject.c_subject;
+   my_binary_observer: binary_observer.c_binary_observer;
    
     
 begin
