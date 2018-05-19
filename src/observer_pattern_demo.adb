@@ -23,7 +23,10 @@ begin
    end loop;
    
    my_subject.setState (16);
-   Ada.Text_IO.Put_Line("-xxxxxxx->" & Integer'Image( my_subject.getState  )); 
+   Ada.Text_IO.Put_Line("-xxxxxxx->" & Integer'Image( my_subject.getState  ));
+   
+   my_subject.setState (18);
+   Ada.Text_IO.Put_Line("-xxxxxxx->" & Integer'Image( my_subject.getState  ));
    
    my_binary_observer.update;
    
