@@ -11,7 +11,7 @@ package subject is
    function  getState (Self : obj) return Integer;
    procedure setState (Self : in out obj; state : Integer) ;
 
-   procedure attach (Self : in out obj; my_observer : observer.obj'Class) ;
+   procedure attach (Self : in out obj; obs : observer.obj'Class) ;
 
 
 private
