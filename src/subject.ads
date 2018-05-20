@@ -1,5 +1,5 @@
 with Ada.Containers.Vectors; use Ada.Containers;
-limited with observer;
+with observer;
 
 package subject is
 

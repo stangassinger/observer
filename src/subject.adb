@@ -26,6 +26,7 @@ package body subject is
       for I of  Self.V  loop
          Ada.Text_IO.Put_Line("--------> " & Integer'Image(I));
       end loop;
+      my_observer.update;
    end;
 
 
