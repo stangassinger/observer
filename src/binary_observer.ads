@@ -9,7 +9,7 @@ package binary_observer is
 
 private
    type obj is new observer.obj with record
-      blub : Integer;
+      blub : Integer := 5;
    end record;
 
 
