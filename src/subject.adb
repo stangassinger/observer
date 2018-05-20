@@ -17,7 +17,7 @@ package body subject is
        Self.state := state;
    end;
 
-   procedure attach (Self : in out obj; my_observer : observer.obj)
+   procedure attach (Self : in out obj; my_observer : observer.obj'Class)
    is
    begin
       --my_observer.update;

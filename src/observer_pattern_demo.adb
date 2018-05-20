@@ -18,7 +18,7 @@ begin
    
    my_binary_observer1.update;
    my_binary_observer2.update;
---   my_subject.attach(my_binary_observer1);
+   my_subject.attach(my_binary_observer1);
    
    
 end observer_pattern_demo;
