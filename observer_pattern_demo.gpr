@@ -5,7 +5,7 @@ project observer_pattern_demo is
    for Main use ("observer_pattern_demo.adb");
    
    package Compiler is
-      for Default_Switches ("ada") use ("-gnat12","-ganteE");
+      for Default_Switches ("ada") use ("-gnat12","-gnateE");
    end Compiler;
 end observer_pattern_demo;
 
