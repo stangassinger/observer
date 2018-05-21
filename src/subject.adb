@@ -20,10 +20,12 @@ package body subject is
    procedure attach (Self : in out obj; obs : observer.obj'Class)
    is
       type obs_Access is access constant observer.obj'Class;
-      -- type Array_Of_obs  is array (Positive range <>) of obs_Access;
+      type obs_Access_ar  is array (1..5) of obs_Access;
       -- ar : Array_Of_obs := (null, null, null);
       --myClass : aliased observer.obj'Class :=  obs;
-      myAcc   : obs_Access :=  obs'Access;
+      myAcc   : obs_Access := obs'Access;
+      my_obs_ar : obs_Access_ar := (others => null);
+
    begin
       -- myAcc :=  myClass'Access;
       Self.V.Append(1);
@@ -35,6 +37,8 @@ package body subject is
 
       myAcc.all.update;
 
+      my_obs_ar(1) := obs'Access;
+      my_obs_ar(1).all.update;
 
       --ar(1).all :=  obs;
       --ar(1).all.update;
