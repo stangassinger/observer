@@ -2,6 +2,12 @@ with Ada.Text_IO;
 
 package body binary_observer is
 
+   function Create return observer.obj_ptr is
+   begin
+      return new obj;
+   end Create;
+
+
    overriding
    procedure update (Self : in obj)
    is
