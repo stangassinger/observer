@@ -4,6 +4,13 @@ with Ada.Text_IO;
 
 package body subject is
 
+
+   function Create return subject.obj_ptr is
+   begin
+      return new obj;
+   end Create;
+
+
    function getState (Self:obj) return Integer
    is
    begin

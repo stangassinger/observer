@@ -4,8 +4,13 @@ with observer;
 package subject is
 
    type obj is tagged private;
+   type obj_ptr is access all obj'Class;
+
+   function Create return obj_ptr;
+
 
    package Obs_Vectors is new Ada.Containers.Indefinite_Vectors(Positive, Positive  );
+
 
 
    function  getState (Self : obj) return Integer;
