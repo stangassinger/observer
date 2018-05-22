@@ -31,17 +31,14 @@ package body subject is
    begin
       -- myAcc :=  myClass'Access;
       Self.V.Append(obs);
-      declare
 
-         a : observer.obj'Class := Self.V.First_Element;
-      begin
-         a.update;
-      end;
-
---          for I of  Self.V  loop
---           --Ada.Text_IO.Put_Line("--------> " & I.all.update);
---           I.all.update;
---          end loop;
+      for J in Self.V.First_Index .. Self.V.Last_Index loop
+         declare
+            obs : observer.obj'Class := Self.V.Element(J);
+         begin
+            obs.update;
+         end;
+      end loop;
 
    end;
 
