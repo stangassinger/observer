@@ -4,7 +4,7 @@ package body observer is
 
    function "=" (Left : in obj; Right : in obj) return Boolean is
    begin
-      return Left.id = Right.id;
+      return true;
    end "=";
 
 

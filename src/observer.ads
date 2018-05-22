@@ -13,10 +13,7 @@ package observer is
    function "=" (Left : in obj; Right : in obj) return Boolean;
 
 private
-   type obj is abstract tagged  record
-      id : Integer;
-   end record;
-
+   type obj is abstract tagged  null record;
 
 
 end observer;
