@@ -26,19 +26,20 @@ package body subject is
 
    procedure attach (Self : in out obj; obs : observer.obj'Class)
    is
-   -- a : observer.obj'Class;
---                       Obj : Media.Object'Class := Medias.Element (J);
+
    begin
       -- myAcc :=  myClass'Access;
       Self.V.Append(obs);
 
-      for J in Self.V.First_Index .. Self.V.Last_Index loop
+
+      for i in Self.V.First_Index..Self.V.Last_Index loop
          declare
-            obs : observer.obj'Class := Self.V.Element(J);
+            a : observer.obj'Class := Self.V(i);
          begin
-            obs.update;
+            a.update;
          end;
       end loop;
+
 
    end;
 
