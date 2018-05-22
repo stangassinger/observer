@@ -12,18 +12,18 @@ procedure observer_pattern_demo is
    
     
 begin
-   my_subject.setState (16);
-   Ada.Text_IO.Put_Line("-xxxxxxx->" & Integer'Image( my_subject.getState  ));
-   
-   my_subject.setState (18);
-   Ada.Text_IO.Put_Line("-xxxxxxx->" & Integer'Image( my_subject.getState  ));
-   
-  
+ 
    Ada.Text_IO.Put_Line(".......attaching binary observer.............");
    my_subject.attach(my_binary_observer.all);
    Ada.Text_IO.Put_Line(".......attaching hex observer.............");
    my_subject.attach(my_hex_observer.all);
    Ada.Text_IO.Put_Line("....................");
+ 
+   Ada.Text_IO.Put_Line("-xxx setState xxxx->" & Integer'Image( my_subject.getState  ));
+   my_subject.setState (16);
+   
+   Ada.Text_IO.Put_Line("-xxx setState xxxx->" & Integer'Image( my_subject.getState  ));
+   my_subject.setState (18);
    
    
 end observer_pattern_demo;

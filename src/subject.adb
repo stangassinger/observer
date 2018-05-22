@@ -21,17 +21,15 @@ package body subject is
    procedure setState (Self: in out obj; state : Integer)
    is
    begin
-       Self.state := state;
+      Self.state := state;
+      Self.notifyAllObservers;
    end setState;
 
 
    procedure attach (Self : in out obj; obs : observer.obj'Class)
    is
-
    begin
-      -- myAcc :=  myClass'Access;
       Self.V.Append(obs);
-      Self.notifyAllObservers;
    end attach;
 
 
