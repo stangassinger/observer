@@ -16,4 +16,13 @@ package body binary_observer is
       Ada.Text_IO.Put_Line("this is the binary_observer update function..");
    end update;
 
+
+   overriding
+   procedure registerSubject (Self : in obj; sub : subject.obj'Class)
+   is
+   begin
+      Self.sub := sub;
+   end registerSubject;
+
+
 end binary_observer;

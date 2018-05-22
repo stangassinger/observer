@@ -16,4 +16,11 @@ package body hex_observer is
       Ada.Text_IO.Put_Line("this is the hex_observer update function..");
    end update;
 
+   overriding
+   procedure registerSubject (Self : in obj; sub: subject.obj'Class)
+   is
+   begin
+      Self.sub := sub;
+   end registerSubject;
+
 end hex_observer;

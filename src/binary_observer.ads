@@ -1,4 +1,5 @@
 with observer;
+with subject;
 
 package binary_observer is
 
@@ -9,9 +10,13 @@ package binary_observer is
    overriding
    procedure update (Self : in obj) ;
 
+   overriding
+   procedure registerSubject (Self : in obj; sub : subject.obj'Class);
+
 private
    type obj is new observer.obj with record
       blub : Integer := 5;
+      -- sub : access subject.obj;
    end record;
 
 

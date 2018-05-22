@@ -10,10 +10,14 @@ package observer is
 
    procedure update (Self : in obj) is abstract;
 
+   procedure registerSubject (Self : in obj; sub : subject.obj'Class) is abstract;
+
    function "=" (Left : in obj; Right : in obj) return Boolean;
 
 private
-   type obj is abstract tagged  null record;
+   type obj is abstract tagged  record
+      sub : subject.obj'Class;
+   end record;
 
 
 end observer;
