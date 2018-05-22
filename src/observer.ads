@@ -1,4 +1,4 @@
-limited  with subject;
+limited with subject;
 
 package observer is
 
@@ -10,8 +10,13 @@ package observer is
 
    procedure update (Self : in obj) is abstract;
 
+   function "=" (Left : in obj; Right : in obj) return Boolean;
+
 private
-   type obj is abstract tagged null record;
+   type obj is abstract tagged  record
+      id : Integer;
+   end record;
+
 
 
 end observer;

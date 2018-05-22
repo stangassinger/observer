@@ -13,7 +13,7 @@ package body hex_observer is
    is
    begin
 
-      Ada.Text_IO.Put_Line("this is the hex_observer update function");
+      Ada.Text_IO.Put_Line("this is the hex_observer update function..");
    end update;
 
 end hex_observer;

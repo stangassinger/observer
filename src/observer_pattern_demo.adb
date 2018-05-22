@@ -18,10 +18,11 @@ begin
    my_subject.setState (18);
    Ada.Text_IO.Put_Line("-xxxxxxx->" & Integer'Image( my_subject.getState  ));
    
-   my_binary_observer.update;
+  
 
    my_subject.attach(my_binary_observer.all);
    my_subject.attach(my_hex_observer.all);
+    Ada.Text_IO.Put_Line("....................");
    
    
 end observer_pattern_demo;

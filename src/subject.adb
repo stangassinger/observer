@@ -26,29 +26,23 @@ package body subject is
 
    procedure attach (Self : in out obj; obs : observer.obj'Class)
    is
-      type obs_Access is access constant observer.obj'Class;
-      type obs_Access_ar  is array (1..5) of obs_Access;
-      -- ar : Array_Of_obs := (null, null, null);
-      --myClass : aliased observer.obj'Class :=  obs;
-      myAcc   : obs_Access := obs'Access;
-      my_obs_ar : obs_Access_ar := (others => null);
-
+   -- a : observer.obj'Class;
+--                       Obj : Media.Object'Class := Medias.Element (J);
    begin
       -- myAcc :=  myClass'Access;
-      Self.V.Append(1);
-      Self.V.Append(5);
-      for I of  Self.V  loop
-         Ada.Text_IO.Put_Line("--------> " & Integer'Image(I));
-      end loop;
-      obs.update;
+      Self.V.Append(obs);
+      declare
 
-      myAcc.all.update;
+         a : observer.obj'Class := Self.V.First_Element;
+      begin
+         a.update;
+      end;
 
-      my_obs_ar(1) := obs'Access;
-      my_obs_ar(1).all.update;
+--          for I of  Self.V  loop
+--           --Ada.Text_IO.Put_Line("--------> " & I.all.update);
+--           I.all.update;
+--          end loop;
 
-      --ar(1).all :=  obs;
-      --ar(1).all.update;
    end;
 
 

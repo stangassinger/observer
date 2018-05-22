@@ -9,8 +9,7 @@ package subject is
    function Create return obj_ptr;
 
 
-   package Obs_Vectors is new Ada.Containers.Indefinite_Vectors(Positive, Positive  );
-
+   package Obs_Vectors is new Ada.Containers.Indefinite_Vectors(Positive, observer.obj'Class, observer."=" );
 
 
    function  getState (Self : obj) return Integer;
