@@ -22,7 +22,8 @@ package body subject is
    is
    begin
        Self.state := state;
-   end;
+   end setState;
+
 
    procedure attach (Self : in out obj; obs : observer.obj'Class)
    is
@@ -30,8 +31,13 @@ package body subject is
    begin
       -- myAcc :=  myClass'Access;
       Self.V.Append(obs);
+      Self.notifyAllObservers;
+   end attach;
 
 
+   procedure notifyAllObservers (Self : in out obj)
+   is
+   begin
       for i in Self.V.First_Index..Self.V.Last_Index loop
          declare
             a : observer.obj'Class := Self.V(i);
@@ -39,10 +45,7 @@ package body subject is
             a.update;
          end;
       end loop;
-
-
-   end;
-
+   end notifyAllObservers;
 
 
 end subject;

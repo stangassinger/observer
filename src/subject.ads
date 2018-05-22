@@ -17,6 +17,8 @@ package subject is
 
    procedure attach (Self : in out obj; obs : observer.obj'Class) ;
 
+   procedure notifyAllObservers (Self : in out obj);
+
 
 private
    type obj is tagged record
