@@ -21,8 +21,9 @@ begin
   
 
    my_subject.attach(my_binary_observer.all);
+   Ada.Text_IO.Put_Line("....................");
    my_subject.attach(my_hex_observer.all);
-    Ada.Text_IO.Put_Line("....................");
+   Ada.Text_IO.Put_Line("....................");
    
    
 end observer_pattern_demo;

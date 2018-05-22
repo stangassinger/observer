@@ -26,22 +26,21 @@ package body subject is
 
    procedure attach (Self : in out obj; obs : observer.obj'Class)
    is
-   -- a : observer.obj'Class;
---                       Obj : Media.Object'Class := Medias.Element (J);
+
    begin
       -- myAcc :=  myClass'Access;
       Self.V.Append(obs);
-      declare
 
-         a : observer.obj'Class := Self.V.First_Element;
-      begin
-         a.update;
-      end;
+      for i in Self.V.First_Index..Self.V.Last_Index loop
+         declare
+            a : observer.obj'Class := Self.V(i);
+         begin
+            a.update;
+         end;
+      end loop;
 
---          for I of  Self.V  loop
---           --Ada.Text_IO.Put_Line("--------> " & I.all.update);
---           I.all.update;
---          end loop;
+
+
 
    end;
 
