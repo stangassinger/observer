@@ -11,9 +11,9 @@ package body observer is
 
 
 
-   procedure registerSubject (Self : in obj; sub : sub_obj_ptr)
+   procedure registerSubject (Self : in obj; sub : subject.obj_ptr)
    is
-      a : sub_obj_ptr := sub;
+      a : subject.obj_ptr := sub;
    begin
       Ada.Text_IO.Put_Line("this:  " & Integer'Image(a.getState) );
 

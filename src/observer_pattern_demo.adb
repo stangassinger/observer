@@ -6,7 +6,7 @@ with binary_observer;
 with hex_observer;
 
 procedure observer_pattern_demo is
-   my_subject : observer.sub_obj_ptr := observer.sub_obj_ptr(subject.Create);
+   my_subject        : subject.obj_ptr  := subject.Create;
    my_binary_observer: observer.obj_ptr := binary_observer.Create;
    my_hex_observer   : observer.obj_ptr := hex_observer.Create;
    
