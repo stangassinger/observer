@@ -10,8 +10,6 @@ package hex_observer is
    overriding
    procedure update (Self : in obj) ;
 
-   overriding
-   procedure registerSubject (Self : in obj; sub : subject.obj_ptr);
 
 
 private
