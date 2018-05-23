@@ -17,9 +17,9 @@ package body hex_observer is
    end update;
 
    overriding
-   procedure registerSubject (Self : in obj; sub : subject.obj'Class)
+   procedure registerSubject (Self : in obj; sub : subject.obj_ptr)
    is
-      a : subject.obj'Class := sub;
+      a : subject.obj_ptr := sub;
    begin
       Ada.Text_IO.Put_Line("this:  " & Integer'Image(a.getState) );
    end registerSubject;

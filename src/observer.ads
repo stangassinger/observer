@@ -10,7 +10,7 @@ package observer is
 
    procedure update (Self : in obj) is abstract;
 
-   procedure registerSubject (Self : in obj; sub : subject.obj'Class) is abstract;
+   procedure registerSubject (Self : in obj; sub : subject.obj_ptr) is abstract;
 
    function "=" (Left : in obj; Right : in obj) return Boolean;
 
