@@ -12,7 +12,7 @@ procedure observer_pattern_demo is
    
     
 begin
-   
+   my_binary_observer.registerSubject(my_subject);
    my_hex_observer.registerSubject(my_subject);
  
    Ada.Text_IO.Put_Line(".......attaching binary observer.............");
