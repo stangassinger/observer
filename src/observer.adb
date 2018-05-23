@@ -1,5 +1,6 @@
 with Ada.Unchecked_Deallocation;
 with Ada.Text_IO;
+with subject;
 
 package body observer is
 
@@ -14,8 +15,8 @@ package body observer is
    is
       a : sub_obj_ptr := sub;
    begin
-      -- Ada.Text_IO.Put_Line("this:  " & Integer'Image(a.getState) );
-      null;
+      Ada.Text_IO.Put_Line("this:  " & Integer'Image(a.getState) );
+
    end registerSubject;
 
 
