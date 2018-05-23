@@ -4,7 +4,7 @@ with subject;
 
 package body observer is
 
-   static_sub : subject.obj_ptr;
+   static_sub : subject.obj_ptr := null;
 
 
    function "=" (Left : in obj; Right : in obj) return Boolean is
