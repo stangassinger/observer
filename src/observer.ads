@@ -15,9 +15,7 @@ package observer is
    function "=" (Left : in obj; Right : in obj) return Boolean;
 
 private
-   type obj is abstract tagged  record
-      sub : subject.obj'Class;
-   end record;
+   type obj is abstract tagged null record;
 
 
 end observer;

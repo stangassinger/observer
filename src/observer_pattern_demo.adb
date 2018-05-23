@@ -21,11 +21,13 @@ begin
    my_subject.attach(my_hex_observer.all);
    Ada.Text_IO.Put_Line("....................");
  
-   Ada.Text_IO.Put_Line("-xxx setState xxxx->" & Integer'Image( my_subject.getState  ));
-   my_subject.setState (16);
    
+   my_subject.setState (16);
    Ada.Text_IO.Put_Line("-xxx setState xxxx->" & Integer'Image( my_subject.getState  ));
+   
+   
    my_subject.setState (18);
+   Ada.Text_IO.Put_Line("-xxx setState xxxx->" & Integer'Image( my_subject.getState  ));
    
    
 end observer_pattern_demo;

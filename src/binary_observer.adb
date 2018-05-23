@@ -20,8 +20,9 @@ package body binary_observer is
    overriding
    procedure registerSubject (Self : in obj; sub : subject.obj'Class)
    is
+      a : subject.obj'Class := sub;
    begin
-      Self.sub := sub;
+      Ada.Text_IO.Put_Line("this:  " & Integer'Image(a.getState) );
    end registerSubject;
 
 
