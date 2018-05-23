@@ -9,13 +9,13 @@ package subject is
    function Create return obj_ptr;
 
 
-   package Obs_Vectors is new Ada.Containers.Indefinite_Vectors(Positive, observer.obj'Class, observer."=" );
+   package Obs_Vectors is new Ada.Containers.Indefinite_Vectors(Positive, observer.obj_ptr, observer."=" );
 
 
    function  getState (Self : obj) return Integer;
    procedure setState (Self : in out obj; state : Integer) ;
 
-   procedure attach (Self : in out obj; obs : observer.obj'Class) ;
+   procedure attach (Self : in out obj; obs : observer.obj_ptr) ;
 
    procedure notifyAllObservers (Self : in out obj);
 

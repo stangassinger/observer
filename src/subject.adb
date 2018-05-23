@@ -26,7 +26,7 @@ package body subject is
    end setState;
 
 
-   procedure attach (Self : in out obj; obs : observer.obj'Class)
+   procedure attach (Self : in out obj; obs : observer.obj_ptr)
    is
    begin
       Self.V.Append(obs);
@@ -38,7 +38,7 @@ package body subject is
    begin
       for i in Self.V.First_Index..Self.V.Last_Index loop
          declare
-            a : observer.obj'Class := Self.V(i);
+            a : observer.obj_ptr := Self.V(i);
          begin
             a.update;
          end;

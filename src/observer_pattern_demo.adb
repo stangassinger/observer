@@ -16,9 +16,9 @@ begin
    my_hex_observer.registerSubject(my_subject);
  
    Ada.Text_IO.Put_Line(".......attaching binary observer.............");
-   my_subject.attach(my_binary_observer.all);
+   my_subject.attach(my_binary_observer);
    Ada.Text_IO.Put_Line(".......attaching hex observer.............");
-   my_subject.attach(my_hex_observer.all);
+   my_subject.attach(my_hex_observer);
    Ada.Text_IO.Put_Line("....................");
  
    
