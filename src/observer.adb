@@ -4,6 +4,9 @@ with subject;
 
 package body observer is
 
+   static_sub : subject.obj_ptr;
+
+
    function "=" (Left : in obj; Right : in obj) return Boolean is
    begin
       return true;
@@ -13,9 +16,9 @@ package body observer is
 
    procedure registerSubject (Self : in obj; sub : subject.obj_ptr)
    is
-      a : subject.obj_ptr := sub;
    begin
-      Ada.Text_IO.Put_Line("this:  " & Integer'Image(a.getState) );
+      static_sub := sub;
+      Ada.Text_IO.Put_Line("this:  " & Integer'Image (static_sub.getState) );
 
    end registerSubject;
 
@@ -26,5 +29,6 @@ package body observer is
    begin
       Deallocate (Self);
    end;
+
 
 end observer;
