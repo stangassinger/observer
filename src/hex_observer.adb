@@ -1,4 +1,6 @@
 with Ada.Text_IO;
+with Ada.Integer_Text_IO;
+with Ada.Strings.Unbounded;
 
 package body hex_observer is
 
@@ -12,9 +14,10 @@ package body hex_observer is
    procedure update (Self : in obj)
    is
       sub : access subject.obj'Class := Self.get_a;
+      st_hex  : string := "------";
    begin
-
-      Ada.Text_IO.Put_Line("this is the hex_observer update function..    --->" & Integer'Image(sub.getState) );
+      Ada.Integer_Text_IO.Put(  st_hex, sub.getState, 16);
+      Ada.Text_IO.Put_Line("this is the hex_observer update function..    --->" & st_hex );
    end update;
 
 

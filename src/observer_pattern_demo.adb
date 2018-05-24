@@ -23,7 +23,7 @@ begin
  
    
    
-   my_subject.setState (16);
+   my_subject.setState (15);
    Ada.Text_IO.Put_Line("State was set->" & Integer'Image( my_subject.getState  ));
    
   
