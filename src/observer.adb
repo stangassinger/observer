@@ -4,7 +4,7 @@ with subject;
 
 package body observer is
 
-   static_sub : subject.obj_ptr := null;
+   --  static_sub : subject.obj_ptr := null;
 
 
    function "=" (Left : in obj; Right : in obj) return Boolean is
@@ -14,11 +14,11 @@ package body observer is
 
 
 
-   procedure registerSubject (Self : in obj; sub : subject.obj_ptr)
+   procedure registerSubject (Self : access obj; sub : subject.obj_ptr)
    is
    begin
-      static_sub := sub;
-      Ada.Text_IO.Put_Line("this:  " & Integer'Image (static_sub.getState) );
+      Self.a := sub;
+      Ada.Text_IO.Put_Line("this:  " & Integer'Image (Self.a.all.getState) );
 
    end registerSubject;
 

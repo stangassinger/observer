@@ -11,13 +11,13 @@ package observer is
 
    procedure update (Self : in obj) is abstract;
 
-   procedure registerSubject (Self : in obj; sub : subject.obj_ptr);
+   procedure registerSubject (Self : access obj; sub : subject.obj_ptr);
 
    function "=" (Left : in obj; Right : in obj) return Boolean;
 
 private
    type obj is abstract tagged  record
-      a : subject.obj_ptr;
+      a : access  subject.obj'Class;
    end record;
 
 
