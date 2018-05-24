@@ -11,9 +11,10 @@ package body binary_observer is
    overriding
    procedure update (Self : in obj)
    is
+      sub : access subject.obj'Class := Self.get_a;
    begin
 
-      Ada.Text_IO.Put_Line("this is the binary_observer update function..");
+      Ada.Text_IO.Put_Line("this is the binary_observer update function.. --->" & Integer'Image(sub.getState));
    end update;
 
 

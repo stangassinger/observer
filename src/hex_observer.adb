@@ -14,7 +14,7 @@ package body hex_observer is
       sub : access subject.obj'Class := Self.get_a;
    begin
 
-      Ada.Text_IO.Put_Line("this is the hex_observer update function.. " & Integer'Image(sub.getState) );
+      Ada.Text_IO.Put_Line("this is the hex_observer update function..    --->" & Integer'Image(sub.getState) );
    end update;
 
 

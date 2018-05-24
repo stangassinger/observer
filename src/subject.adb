@@ -21,6 +21,7 @@ package body subject is
    procedure setState (Self: in out obj; state : Integer)
    is
    begin
+      Ada.Text_IO.Put_Line("setting State .... to:" & Integer'Image(state));
       Self.state := state;
       Self.notifyAllObservers;
    end setState;

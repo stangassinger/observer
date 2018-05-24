@@ -22,12 +22,13 @@ begin
    Ada.Text_IO.Put_Line("....................");
  
    
+   
    my_subject.setState (16);
-   Ada.Text_IO.Put_Line("-xxx setState xxxx->" & Integer'Image( my_subject.getState  ));
+   Ada.Text_IO.Put_Line("State was set->" & Integer'Image( my_subject.getState  ));
    
-   
+  
    my_subject.setState (18);
-   Ada.Text_IO.Put_Line("-xxx setState xxxx->" & Integer'Image( my_subject.getState  ));
+    Ada.Text_IO.Put_Line("State was set->" & Integer'Image( my_subject.getState  ));
    
    
 end observer_pattern_demo;
