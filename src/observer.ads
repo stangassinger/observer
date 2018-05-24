@@ -15,6 +15,8 @@ package observer is
 
    function "=" (Left : in obj; Right : in obj) return Boolean;
 
+   function get_a(Self : in obj)  return access subject.obj'Class;
+
 private
    type obj is abstract tagged  record
       a : access  subject.obj'Class;

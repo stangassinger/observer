@@ -31,4 +31,13 @@ package body observer is
    end;
 
 
+   function get_a(Self : in obj)  return access subject.obj'Class
+   is
+   begin
+      return Self.a;
+   end get_a;
+
+
+
+
 end observer;
