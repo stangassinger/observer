@@ -38,6 +38,20 @@ package body observer is
    end get_subjectAccess;
 
 
+   function get_ID (Self : in obj)  return Integer
+   is
+   begin
+      return Self.ID;
+   end get_ID;
+
+
+   procedure set_ID (Self : out obj; id : Integer)
+   is
+   begin
+      Self.ID := id;
+   end set_ID;
+
+
 
 
 end observer;

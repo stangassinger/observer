@@ -23,7 +23,7 @@ package subject is
 
 private
    type obj is tagged record
-      state : Integer := 9;
+      state : Integer := 0;
       V     : Obs_Vectors.Vector;
    end record;
 

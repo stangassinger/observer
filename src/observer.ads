@@ -17,10 +17,14 @@ package observer is
 
    function get_subjectAccess(Self : in obj)  return access subject.obj'Class;
 
+   function get_ID(Self : in obj)  return Integer;
+
+   procedure set_ID (Self : out obj; id : Integer);
+
 private
    type obj is abstract tagged  record
       subjectAccess  : access  subject.obj'Class;
-      id : Integer := 0;
+      ID : Integer := 0;
    end record;
 
 
