@@ -32,6 +32,7 @@ begin
    my_subject.detach (my_hex_observer);
    my_subject.detach (my_binary_observer);
    
+   my_subject.setState (17);
    
    
 end observer_pattern_demo;

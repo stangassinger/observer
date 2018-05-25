@@ -43,6 +43,7 @@ package body subject is
         is
    begin
       Ada.Text_IO.Put_Line("Detach Observer with ID:" & Integer'Image(obs.all.get_ID));
+      Self.V.Delete ( obs.all.get_ID );
    end detach;
 
 
