@@ -34,6 +34,15 @@ package body subject is
    end attach;
 
 
+   procedure detach (Self : in out obj; obs : observer.obj_ptr)
+        is
+   begin
+      null;
+   end detach;
+
+
+
+
    procedure notifyAllObservers (Self : in out obj)
    is
    begin

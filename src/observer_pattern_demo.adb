@@ -21,8 +21,7 @@ begin
    my_subject.attach(my_hex_observer);
    Ada.Text_IO.Put_Line("....................");
  
-   
-   
+      
    my_subject.setState (15);
    Ada.Text_IO.Put_Line("State was set->" & Integer'Image( my_subject.getState  ));
    

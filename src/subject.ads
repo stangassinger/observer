@@ -16,6 +16,7 @@ package subject is
    procedure setState (Self : in out obj; state : Integer) ;
 
    procedure attach (Self : in out obj; obs : observer.obj_ptr) ;
+   procedure detach (Self : in out obj; obs : observer.obj_ptr) ;
 
    procedure notifyAllObservers (Self : in out obj);
 

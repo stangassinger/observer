@@ -1,6 +1,6 @@
 with Ada.Text_IO;
 with Ada.Integer_Text_IO;
-with Ada.Strings.Unbounded;
+
 
 package body hex_observer is
 
