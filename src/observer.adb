@@ -27,6 +27,7 @@ package body observer is
    procedure Free (Self : in out obj_ptr) is
       procedure Deallocate is new Ada.Unchecked_Deallocation (obj'Class, obj_ptr);
    begin
+      Ada.Text_IO.Put_Line("Deallocating");
       Deallocate (Self);
    end;
 

@@ -39,11 +39,12 @@ package body subject is
    end attach;
 
 
-   procedure detach (Self : in out obj; obs : observer.obj_ptr)
+   procedure detach (Self : in out obj; obs : in out observer.obj_ptr)
         is
    begin
       Ada.Text_IO.Put_Line("Detach Observer with ID:" & Integer'Image(obs.all.get_ID));
       Self.V.Delete ( obs.all.get_ID );
+      observer.Free ( obs );
    end detach;
 
 
