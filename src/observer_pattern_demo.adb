@@ -23,11 +23,15 @@ begin
  
       
    my_subject.setState (15);
-   Ada.Text_IO.Put_Line("State was set->" & Integer'Image( my_subject.getState  ));
+   Ada.Text_IO.Put_Line ("State was set->" & Integer'Image( my_subject.getState  ));
    
   
    my_subject.setState (18);
-    Ada.Text_IO.Put_Line("State was set->" & Integer'Image( my_subject.getState  ));
+   Ada.Text_IO.Put_Line("State was set->" & Integer'Image( my_subject.getState  ));
+   
+   my_subject.detach (my_hex_observer);
+   my_subject.detach (my_binary_observer);
+   
    
    
 end observer_pattern_demo;

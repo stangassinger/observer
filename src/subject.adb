@@ -29,15 +29,20 @@ package body subject is
 
    procedure attach (Self : in out obj; obs : observer.obj_ptr)
    is
+      idx : Integer := 0;
    begin
+
+      idx := Self.V.Last_Index;
+      obs.all.set_ID ( idx + 1);
       Self.V.Append(obs);
+      Ada.Text_IO.Put_Line("Attache Observer with ID:" & Integer'Image (idx + 1) );
    end attach;
 
 
    procedure detach (Self : in out obj; obs : observer.obj_ptr)
         is
    begin
-      null;
+      Ada.Text_IO.Put_Line("Detach Observer with ID:" & Integer'Image(obs.all.get_ID));
    end detach;
 
 
