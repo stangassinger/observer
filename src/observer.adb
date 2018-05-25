@@ -9,7 +9,7 @@ package body observer is
 
    function "=" (Left : in obj; Right : in obj) return Boolean is
    begin
-      return true;
+      return Left.ID = Right.ID ;
    end "=";
 
 
