@@ -13,11 +13,7 @@ package hex_observer is
 
 
 private
-   type obj is new observer.obj with record
-      blub : Integer := 39;
-      -- sub : access subject.obj;
-   end record;
-
+   type obj is new observer.obj with null record;
 
 
 end hex_observer;

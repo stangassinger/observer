@@ -12,11 +12,7 @@ package binary_observer is
 
 
 private
-   type obj is new observer.obj with record
-      blub : Integer := 5;
-      -- sub : access subject.obj;
-   end record;
-
+   type obj is new observer.obj with null record;
 
 
 end binary_observer;
