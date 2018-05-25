@@ -12,11 +12,22 @@ package body hex_observer is
 
    function draw_hex (my_state : Integer) return String
    is
-      out_string : String := "--------";
+      MAX_BIT_LENGTH : constant := 64;
    begin
-      Ada.Integer_Text_IO.Put(  out_string, my_state, 16);
-      return out_string;
+      for i in 1 .. MAX_BIT_LENGTH loop
+         declare
+            out_string : String(1..i);
+         begin
+            Ada.Integer_Text_IO.Put(  out_string, my_state, 16);
+            return out_string;
+         exception
+            when E: others =>
+              null;
+         end;
+      end loop;
+      return "This error should not happen!!!";
    end draw_hex;
+
 
 
    overriding
