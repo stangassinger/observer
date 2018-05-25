@@ -15,11 +15,12 @@ package observer is
 
    function "=" (Left : in obj; Right : in obj) return Boolean;
 
-   function get_a(Self : in obj)  return access subject.obj'Class;
+   function get_subjectAccess(Self : in obj)  return access subject.obj'Class;
 
 private
    type obj is abstract tagged  record
-      a : access  subject.obj'Class;
+      subjectAccess  : access  subject.obj'Class;
+      id : Integer := 0;
    end record;
 
 

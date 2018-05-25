@@ -17,8 +17,8 @@ package body observer is
    procedure registerSubject (Self : access obj; sub : subject.obj_ptr)
    is
    begin
-      Self.a := sub;
-      Ada.Text_IO.Put_Line("this:  " & Integer'Image (Self.a.all.getState) );
+      Self.subjectAccess := sub;
+      Ada.Text_IO.Put_Line("this:  " & Integer'Image (Self.subjectAccess.all.getState) );
 
    end registerSubject;
 
@@ -31,11 +31,11 @@ package body observer is
    end;
 
 
-   function get_a(Self : in obj)  return access subject.obj'Class
+   function get_subjectAccess(Self : in obj)  return access subject.obj'Class
    is
    begin
-      return Self.a;
-   end get_a;
+      return Self.subjectAccess;
+   end get_subjectAccess;
 
 
 
