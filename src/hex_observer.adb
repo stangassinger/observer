@@ -10,14 +10,22 @@ package body hex_observer is
    end Create;
 
 
+   function draw_hex (my_state : Integer) return String
+   is
+      out_string : String := "--------";
+   begin
+      Ada.Integer_Text_IO.Put(  out_string, my_state, 16);
+      return out_string;
+   end draw_hex;
+
+
    overriding
    procedure update (Self : in obj)
    is
       sub : access subject.obj'Class := Self.get_a;
-      st_hex  : string := "------";
+      my_state : Integer := sub.getState;
    begin
-      Ada.Integer_Text_IO.Put(  st_hex, sub.getState, 16);
-      Ada.Text_IO.Put_Line("this is the hex_observer update function..    --->" & st_hex );
+      Ada.Text_IO.Put_Line("this is the hex_observer update function..    --->" & draw_hex (my_state) );
    end update;
 
 
