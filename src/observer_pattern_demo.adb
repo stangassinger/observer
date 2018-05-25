@@ -30,8 +30,7 @@ begin
    Ada.Text_IO.Put_Line("State was set->" & Integer'Image( my_subject.getState  ));
    
    my_subject.detach (my_hex_observer);
-   my_subject.detach (my_binary_observer);
-   --  observer.Free ( my_binary_observer );
+   my_subject.detach (my_binary_observer);   
    
    
    my_subject.setState (17);
